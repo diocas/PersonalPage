@@ -1,0 +1,45 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "fullpage.js/jquery.fullPage.scss";
+// endbower
+
+@media (min-width: 992px) {
+  .modal-dialog {
+    width: 900px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+  .modal-dialog {
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-dialog {
+    width: 100%;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    margin: 10px;
+    color: #000;
+  }
+
+  .active {
+    background-color: #00A000;
+  }
+
+}
