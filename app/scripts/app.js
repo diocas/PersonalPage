@@ -99,29 +99,28 @@
 
     //events
     onLeave: function(index, nextIndex, direction){
-    console.log('onLeave');
+
+      if(nextIndex === 1) {
+        //TODO mostrar nome no header
+      }
       //if(blockScroll !== null && blockScroll) {
       //  return false;
       //}
     },
     afterLoad: function(anchorLink, index){
-      console.log('afterLoad');
 
     },
     afterRender: function(){
-      console.log('afterRender');
 
     },
     afterResize: function(){
-      console.log('afterResize');
 
     },
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
-      console.log('afterSlideLoad');
 
     },
     onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
-      console.log('onSlideLeave');
 
     }
   });
+

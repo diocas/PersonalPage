@@ -1,8 +1,19 @@
+$top-menu-font: 'Fira Sans', sans-serif;
+$foreground-color: #92b5b6;
+$background-color: #fff;
+$secondary-color: #4a4a4a;
+
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "fullpage.js/jquery.fullPage.scss";
 // endbower
+
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,500,300);
+
+* {
+  box-sizing: border-box;
+}
 
 @media (min-width: 992px) {
   .modal-dialog {
@@ -26,20 +37,73 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  height: 40px;
   z-index: 70;
   width: 100%;
   padding: 0;
   margin: 0;
+  background-color: $foreground-color;
+  padding: 17px 0 17px 0;
+
+  ul {
+    float: right;
+    margin: 0;
+  }
 
   li {
     display: inline-block;
-    margin: 10px;
-    color: #000;
+    text-transform: uppercase;
+    padding: 0 50px 0 50px;
+    border-left: solid 1px $background-color;
+    font-family: $top-menu-font;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 26px;
+
+    a, a:active, a:visited, a:hover, a:active {
+      color: $background-color;
+      margin: 0px;
+      text-decoration: none;
+      position: relative;
+    }
+    a:before {
+
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $background-color;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
   }
 
-  .active {
-    background-color: #00A000;
+
+  .active a:before, li a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 
+}
+
+.section {
+  padding: 150px;
+}
+
+#intro {
+  background-color: $secondary-color;
+}
+
+#about, #projects {
+  background-color: $foreground-color;
+}
+
+#skills, #contacts {
+  background-color: $background-color;
 }
