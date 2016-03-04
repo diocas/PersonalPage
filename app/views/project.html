@@ -1,58 +1,66 @@
+<div class="more-info">
+  <a class="back" href="" ng-click="ok($event)"><i class="fa fa-arrow-left"></i> <span class="text">Return</span></a>
 
-<div class="modal-header">
-  <a href="" ng-click="ok($event)">fechar</a>
+  <div class="row institution-info">
+    <div class="col-md-4 col-md-push-8">
+      <img ng-src="{{project.logoUrl}}" class="img-responsive img-circle institution-img" alt="{{project.name}}">
+    </div>
+    <div class="col-md-8 col-md-pull-4 institution-text">
+      <p class="date-period">{{project.beginning}} <span ng-show="project.end != null"> - {{project.end}}</span></p>
+      <p class="institution-name" ng-show="project.url != null"><a href="{{project.url}}" target="_blank">{{project.name}} <span class="fa fa-arrow-right" ></span></a></p>
+      <p class="institution-name" ng-show="project.url == null">{{project.name}}</p>
+      <p class="institution-role" ng-show="project.repository != null"><span class="fa fa-git"></span> <a href="{{project.repository}}" target="_blank">Repository</a></p>
+    </div>
+  </div>
+
+  <div class="description">
+    <p ng-repeat="line in project.descriptionText.split('\n')">{{line}}</p>
+  </div>
+
+  <div ng-show="project.files != null">
+    <h3>Files</h3>
+
+    <ul class="files">
+      <li ng-repeat="file in project.files"><span class="fa fa-file-text-o"></span> <a href="{{file.url}}" target="_blank">{{file.name}}</a></li>
+    </ul>
+
+  </div>
+
+  <div ng-show="project.links != null">
+    <h3>Links</h3>
+
+    <ul class="files">
+      <li ng-repeat="link in project.links"><a href="{{link.url}}" target="_blank"><span class="fa fa-link"></span> {{link.name}}</a></li>
+    </ul>
+
+  </div>
+
+  <div ng-show="project.technologies != null">
+    <h3>Technologies used</h3>
+
+    <ul class="files">
+      <li ng-repeat="technology in project.technologies"><span class="fa fa-file-code-o"></span> {{technology}}</li>
+    </ul>
+
+  </div>
+
+  <div ng-show="project.coworkers != null">
+    <h3>Coworkers</h3>
+
+    <ul class="files">
+      <li ng-repeat="coworker in project.coworkers"><span class="fa fa-user"></span> {{coworker.name}}</li>
+    </ul>
+
+  </div>
+
+  <div ng-show="project.images != null">
+    <h3>Images</h3>
+
+    <ul class="files">
+      <li ng-repeat="image in project.images"><img ng-src="{{image.url}}" class="img-responsive" alt="{{image.name}}"></li>
+    </ul>
+
+  </div>
+
+
 </div>
-
-<div class="modal-body">
-
-  <p>This is the project {{ projectId }} view.</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>This is the project {{ projectId }} view.</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>This is the project {{ projectId }} view.</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-</div>
-
-

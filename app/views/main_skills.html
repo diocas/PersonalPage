@@ -1,3 +1,47 @@
-<p> SKILLS </p>
+<div class="container">
+  <h2>Skills</h2>
 
-<a href="" ng-click="gotoPath('project',1)">Projeto 1</a>
+  <div class="button-block" ng-repeat="skill in data.skills">
+    <div class="circular-button">
+      <img ng-src="{{skill.logoUrl}}" class="img-responsive img-circle" alt="{{skill.name}}">
+    </div>
+    <div class="description">{{skill.name}}<br>(level {{skill.level}}/5)</div>
+  </div>
+
+  <h3>Work Experience</h3>
+
+  <div class="row institution" ng-click="gotoPath('company',company.prettyName)" ng-repeat="company in data.experience">
+    <div class="col-md-3 col-md-push-9 ">
+      <img ng-src="{{company.logoUrl}}" class="img-responsive img-circle center-block" alt="{{company.companyName}}">
+    </div>
+    <div class="col-md-1 col-md-pull-3">
+      <p class="year">{{company.beginningYear}}</p>
+    </div>
+    <div class="col-md-8 col-md-pull-3">
+      <p class="institution-name">{{company.companyName}} <span class="fa fa-arrow-right"></span></p>
+      <p class="institution-role">{{company.role}}</p>
+    </div>
+  </div>
+
+  <h3>Education</h3>
+
+  <div class="row institution" ng-click="gotoPath('university',university.prettyName)"
+       ng-repeat="university in data.education">
+    <div class="col-md-3 col-md-push-9 ">
+      <img ng-src="{{university.logoUrl}}" class="img-responsive img-circle center-block"
+           alt="{{university.institutionName}}">
+    </div>
+    <div class="col-md-1 col-md-pull-3">
+      <p class="year">{{university.beginning}}</p>
+    </div>
+    <div class="col-md-8 col-md-pull-3">
+      <p class="institution-name">{{university.institutionName}} <span class="fa fa-arrow-right"></span></p>
+      <p class="institution-role">{{university.degree}}</p>
+    </div>
+  </div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+
+</div>

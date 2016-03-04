@@ -1,1 +1,26 @@
-<p>This is the job {{ jobId }} view.</p>
+<div class="job">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-2 images">
+      <img src="images/profile.jpg" class="img-responsive img-circle me" alt="Diogo Castro">
+      <img ng-src="{{job.logoUrl}}" class="img-responsive img-circle company" alt="{{job.name}}">
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+
+      <p class="name">{{job.name}}</p>
+      <p>Diogo Castro is asking your permission to <span class="highlight">work for you</span>. <br>He will have access to:</p>
+      <ul>
+        <li>Your building</li>
+        <li>Your equipment</li>
+      </ul>
+      <p>But he will:</p>
+      <ul>
+        <li>Work hard</li>
+        <li>Learn new things</li>
+        <li>Always improve</li>
+      </ul>
+      <p>&nbsp;</p>
+      <a class="button" href="" ng-click="ga('send', 'event', 'Job', 'yes', '{{job.name}}'); ok($event)">Yes</a>
+      <a class="button" href="" ng-click="ga('send', 'event', 'Job', 'later', '{{job.name}}'); ok($event)">I will decide later</a>
+    </div>
+  </div>
+</div>

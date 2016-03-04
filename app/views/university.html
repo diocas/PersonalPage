@@ -1,0 +1,98 @@
+<div class="more-info">
+  <a class="back" href="" ng-click="ok($event)"><i class="fa fa-arrow-left"></i> <span class="text">Return</span></a>
+
+  <div class="row institution-info">
+    <div class="col-md-4 col-md-push-8">
+      <img ng-src="{{university.logoUrl}}" class="img-responsive img-circle institution-img" alt="{{university.institutionName}}">
+    </div>
+    <div class="col-md-8 col-md-pull-4 institution-text">
+      <p class="date-period" ng-show="university.end != null">{{university.beginning}} - {{university.end}}</p>
+      <p class="date-period" ng-show="university.end == null">{{university.beginning}} - current</p>
+      <p class="institution-name"><a href="{{university.url}}" target="_blank">{{university.institutionName}} <span class="fa fa-arrow-right"></span></a></p>
+      <p class="institution-role">{{university.degree}}</p>
+    </div>
+  </div>
+
+  <div class="description">
+    <p ng-repeat="line in university.descriptionText.split('\n')">{{line}}</p>
+  </div>
+
+  <div ng-show="university.subjects != null">
+    <h3>Principal Subjects</h3>
+
+    <ul class="files">
+      <li ng-repeat="subject in university.subjects"><span class="fa fa-book"></span> {{subject}}</li>
+    </ul>
+  </div>
+
+  <div ng-show="university.files != null">
+    <h3>Files</h3>
+
+    <ul class="files">
+      <li ng-repeat="file in university.files"><span class="fa fa-file-text-o"></span> <a href="{{file.url}}" target="_blank">{{file.name}}</a></li>
+    </ul>
+  </div>
+
+  <div ng-show="university.links != null">
+    <h3>Links</h3>
+
+    <ul class="files">
+      <li ng-repeat="link in university.links"><a href="{{link.url}}" target="_blank"><span class="fa fa-link"></span> {{link.name}}</a></li>
+    </ul>
+
+  </div>
+
+  <div ng-show="university.projects != null">
+    <h3>Projects</h3>
+
+    <div class="row institution" ng-click="gotoPath('project',project.prettyName)" ng-repeat="project in university.projects">
+      <div class="col-md-3 col-md-push-9 ">
+        <img ng-src="{{project.logoUrl}}" class="img-responsive img-circle center-block" alt="{{project.name}}">
+      </div>
+      <div class="col-md-1 col-md-pull-3">
+        <p class="year">{{project.beginning}}</p>
+      </div>
+      <div class="col-md-8 col-md-pull-3">
+        <p class="institution-name">{{project.name}} <span class="fa fa-arrow-right"></span></p>
+        <p class="institution-role">{{project.miniDescription}}</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div ng-show="university.organizations != null">
+    <h3>Organizations</h3>
+
+    <div class="row institution" ng-repeat="organization in university.organizations" href="{{organization.url}}">
+      <div class="col-md-3 col-md-push-9 ">
+        <img ng-src="{{organization.logoUrl}}" class="img-responsive img-circle center-block" alt="{{organization.name}}">
+      </div>
+      <div class="col-md-9 col-md-pull-3">
+        <p class="institution-name">{{organization.name}}  <span class="fa fa-arrow-right"></span></p>
+        <p class="institution-role">{{organization.description}}</p>
+        <p>Responsabilities:</p>
+        <ul>
+          <li ng-repeat="responsibility in organization.responsibilities">{{responsibility}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div ng-show="university.awards != null">
+    <h3>Awards</h3>
+
+    <div class="row institution" ng-repeat="award in university.awards">
+
+      <div class="col-md-1">
+        <p class="year">{{award.year}}</p>
+      </div>
+      <div class="col-md-11">
+        <p class="institution-name">{{award.name}}</p>
+        <p class="institution-role">{{award.institution}}</p>
+        <p>{{award.description}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>

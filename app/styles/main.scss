@@ -1,4 +1,7 @@
 $top-menu-font: 'Fira Sans', sans-serif;
+$top-menu-name: 'Lato', sans-serif;
+$text-font: 'Vollkorn', serif;
+$menu-color: #799697;
 $foreground-color: #92b5b6;
 $background-color: #fff;
 $secondary-color: #4a4a4a;
@@ -9,11 +12,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "fullpage.js/jquery.fullPage.scss";
 // endbower
 
+// fonts
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,500,300);
-
-* {
-  box-sizing: border-box;
-}
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Vollkorn);
 
 @media (min-width: 992px) {
   .modal-dialog {
@@ -41,30 +43,30 @@ header {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: $foreground-color;
-  padding: 17px 0 17px 0;
-
-  ul {
-    float: right;
-    margin: 0;
-  }
+  background-color: $secondary-color;
 
   li {
-    display: inline-block;
+    display: inline;
     text-transform: uppercase;
-    padding: 0 50px 0 50px;
-    border-left: solid 1px $background-color;
+    padding: 0 55px 0 55px;
     font-family: $top-menu-font;
     vertical-align: middle;
-    font-size: 14px;
-    line-height: 26px;
+    font-size: 1em;
+    line-height: 30px;
+    text-align: center;
+    margin: 0;
 
-    a, a:active, a:visited, a:hover, a:active {
-      color: $background-color;
-      margin: 0px;
-      text-decoration: none;
+    a, a:active, a:visited, a:hover, a:focus {
       position: relative;
+      color: $background-color;
+      margin: 0 !important;
+      padding: 5px 0 0 0 !important;
+      line-height: 25px !important;
+      text-decoration: none;
+      display: inline-block !important;
+      background-color: transparent !important;
     }
+
     a:before {
 
       content: "";
@@ -83,6 +85,9 @@ header {
 
   }
 
+  li:first-of-type {
+    border-left: none;
+  }
 
   .active a:before, li a:hover:before {
     visibility: visible;
@@ -90,20 +95,490 @@ header {
     transform: scaleX(1);
   }
 
-}
+  .navbar-brand {
 
-.section {
-  padding: 150px;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $background-color;
+    cursor: pointer;
+    font-family: $top-menu-name;
+    font-size: 1.5em;
+    line-height: 20px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+    :active, :visited, :hover, :active, :focus {
+
+      color: $background-color;
+      text-decoration: none;
+    }
+  }
+
+  .brand-activate {
+    opacity: 1;
+  }
+
 }
 
 #intro {
   background-color: $secondary-color;
+
+  .container {
+
+    .row {
+
+      .photo {
+        padding: 60px;
+      }
+
+      h1 {
+        font-family: $top-menu-name;
+        font-size: 5em;
+        color: $background-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      p {
+        font-family: $top-menu-name;
+        font-size: 2em;
+        color: $background-color;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  body {
+    font-size: 10px !important;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  .section {
+    padding: 50px 20px 0 20px;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: $screen-md-min) and (min-width: $screen-sm-min) {
+
+  body {
+    font-size: 10px !important;
+  }
+
+  header {
+    padding: 7px 0 7px 0;
+  }
+
+  .section {
+    padding: 54px 30px 0 30px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+  body {
+    font-size: 14px !important;
+  }
+
+  header {
+    padding: 17px 0 17px 0;
+
+    li {
+      border-left: solid 1px $background-color;
+    }
+  }
+
+  .section {
+    padding-top: 74px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+    h3 {
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+  }
+
+  #intro {
+    .container {
+      height: 80%;
+
+      .row {
+        height: 100%;
+
+        .align-center {
+          height: 100%;
+
+          .img-wrapper {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          .text-wrapper {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  #about {
+    .circular-button {
+      border: solid 5px $background-color;
+      width: 90px;
+      height: 90px;
+      line-height: 85px;
+    }
+  }
+
+  #skills {
+
+    .button-block {
+
+      .circular-button {
+        border: solid 6px $foreground-color;
+        width: 120px;
+        height: 120px;
+        line-height: 100px;
+        vertical-align: super;
+
+        img {
+          width: 80%;
+          height: auto;
+          margin: auto;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+#about, #projects, #skills, #contacts {
+
+  .container {
+    padding: 40px 0;
+  }
+
+  p {
+    font-family: $text-font;
+    font-size: 1.5em;
+  }
+
 }
 
 #about, #projects {
   background-color: $foreground-color;
+  color: $background-color;
+
+  .institution {
+    .year {
+      color: $secondary-color;
+      font-family: $top-menu-font;
+    }
+
+    .institution-name {
+      font-family: $top-menu-font;
+      color: $secondary-color;
+    }
+
+    .institution-role {
+      font-size: 1.2em;
+    }
+  }
 }
 
 #skills, #contacts {
   background-color: $background-color;
+  color: $secondary-color;
+
+  h3 {
+    color: $foreground-color;
+  }
+
+  .institution {
+    .year {
+      color: $foreground-color;
+      font-family: $top-menu-font;
+    }
+
+    .institution-name {
+      font-family: $top-menu-font;
+    }
+  }
+}
+
+h2 {
+  font-family: $top-menu-name;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+h3 {
+  font-family: $top-menu-name;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.button-block {
+  font-family: $top-menu-name;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  margin-left: 30px;
+
+  .circular-button {
+    border-radius: 50%;
+    background: transparent;
+    font-size: 1.5em;
+    font-family: $top-menu-name;
+    margin: 30px 0 15px 0;
+    display: block;
+
+    .fa {
+      font-size: 1.6em;
+    }
+  }
+
+  .circular-button:link, .circular-button:active, .circular-button:visited, .circular-button:hover, .circular-button:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .description {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+.button-block:hover .description {
+  opacity: 1;
+}
+
+.institution {
+
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  .institution-name {
+    font-family: $top-menu-font;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  .institution-role {
+    margin-top: 0;
+  }
+
+  .year {
+    text-align: center;
+  }
+
+  img {
+    max-height: 80px;
+  }
+
+  .fa {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+.institution:hover .fa {
+  opacity: 1;
+}
+
+.more-info {
+
+  padding: 40px 50px 40px 50px;
+  font-family: $text-font;
+
+  .back {
+
+    font-size: 1.5em;
+    text-decoration: none;
+    color: $secondary-color;
+
+    .text {
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+    }
+  }
+
+  .back:hover {
+
+    text-decoration: none;
+
+    .text {
+      opacity: 1;
+    }
+  }
+
+  .institution-info {
+
+    position: relative;
+    margin-bottom: 40px;
+
+    .institution-img {
+      width: 80%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .institution-text {
+      bottom: 0;
+      position: absolute;
+
+      .institution-name {
+        font-family: $top-menu-font;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        font-weight: bold;
+        font-size: 1.7em;
+        white-space: pre;
+
+        a, a:active, a:visited, a:focus {
+          text-decoration: none;
+
+          .fa {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+          }
+        }
+
+        a:hover .fa {
+          opacity: 1;
+        }
+      }
+
+      .institution-role {
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  p {
+    font-family: $text-font;
+    font-size: 1.2em;
+  }
+
+  .date-period {
+    font-family: $text-font;
+    font-size: 1.3em;
+  }
+
+  h3 {
+    color: $foreground-color;
+    margin-bottom: 25px;
+    margin-top: 40px;
+  }
+
+  .institution {
+    font-size: 0.8em;
+  }
+
+  .files {
+    list-style-type: none;
+    padding-left: 3px;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    .fa {
+      font-size: 1.5em;
+      margin-right: 6px;
+    }
+
+    img {
+      margin-bottom: 10px;
+    }
+  }
+
+  a, a:active, a:visited, a:focus {
+    color: $secondary-color;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+}
+
+.modal-dialog {
+  transform: none !important;
+
+}
+
+.modal-content {
+  box-shadow: none;
+}
+
+.job {
+
+  padding: 50px;
+  height: 400px;
+  font-family: $text-font;
+
+  .name {
+    font-family: $top-menu-name;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .button  {
+    font-family: $top-menu-name;
+    margin-right: 19px;
+    padding: 5px;
+    text-decoration: none;
+    background-color: $foreground-color;
+    border: solid 2px $foreground-color;
+    color: $background-color;
+  }
+
+  .buton:hover {
+    color: $foreground-color;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  .left-space {
+    padding-left: 50px;
+  }
+
+  .img-responsive {
+    max-width: 250px;
+  }
+  .company {
+    z-index: 20;
+    position: absolute;
+    right: 200px;
+  }
+  .me {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+  }
+
+  .highlight {
+    font-weight: bold;
+  }
 }

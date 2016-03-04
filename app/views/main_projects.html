@@ -1,1 +1,17 @@
-<p> PROJECTS </p>
+<div class="container">
+  <h2>Projects</h2>
+
+  <div class="row institution" ng-click="gotoPath('project',project.prettyName)" ng-repeat="project in data.projects">
+    <div class="col-md-3 col-md-push-9 ">
+      <img ng-src="{{project.logoUrl}}" class="img-responsive img-circle center-block" alt="{{project.name}}" ng-show="project.logoUrl != null">
+    </div>
+    <div class="col-md-1 col-md-pull-3">
+      <p class="year">{{project.beginning}}</p>
+    </div>
+    <div class="col-md-8 col-md-pull-3">
+      <p class="institution-name">{{project.name}}  <span class="fa fa-arrow-right"></span></p>
+      <p class="institution-role">{{project.miniDescription}}</p>
+    </div>
+  </div>
+
+  </div>

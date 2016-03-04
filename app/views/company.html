@@ -1,2 +1,79 @@
+<div class="more-info">
+  <a class="back" href="" ng-click="ok($event)"><i class="fa fa-arrow-left"></i> <span class="text">Return</span></a>
 
-<p>This is the company {{ companyId }} view.</p>
+  <div class="row institution-info">
+    <div class="col-md-4 col-md-push-8">
+      <img ng-src="{{company.logoUrl}}" class="img-responsive img-circle institution-img" alt="{{company.companyName}}">
+    </div>
+    <div class="col-md-8 col-md-pull-4 institution-text">
+      <p class="date-period" ng-show="company.endYear != null">{{company.beginningYear}} - {{company.endYear}}</p>
+      <p class="date-period" ng-show="company.endYear == null">{{company.beginningYear}} - current</p>
+      <p class="institution-name"><a href="{{company.url}}" target="_blank">{{company.companyName}} <span class="fa fa-arrow-right"></span></a></p>
+      <p class="institution-role">{{company.role}}</p>
+    </div>
+  </div>
+
+  <div class="description">
+    <p ng-repeat="line in company.descriptionText.split('\n')">{{line}}</p>
+  </div>
+
+  <div ng-show="company.files != null">
+    <h3>Files</h3>
+
+    <ul class="files">
+      <li ng-repeat="file in company.files"><span class="fa fa-file-text-o"></span> <a href="{{file.url}}" target="_blank">{{file.name}}</a></li>
+    </ul>
+  </div>
+
+  <div ng-show="company.links != null">
+    <h3>Links</h3>
+
+    <ul class="files">
+      <li ng-repeat="link in company.links"><a href="{{link.url}}" target="_blank"><span class="fa fa-link"></span> {{link.name}}</a></li>
+    </ul>
+
+  </div>
+
+  <div ng-show="company.projects != null">
+    <h3>Projects</h3>
+
+    <div class="row institution" ng-click="gotoPath('project',project.prettyName)" ng-repeat="project in company.projects">
+      <div class="col-md-3 col-md-push-9 ">
+        <img ng-src="{{project.logoUrl}}" class="img-responsive img-circle center-block" alt="{{project.name}}">
+      </div>
+      <div class="col-md-1 col-md-pull-3">
+        <p class="year">{{project.beginning}}</p>
+      </div>
+      <div class="col-md-8 col-md-pull-3">
+        <p class="institution-name">{{project.name}} <span class="fa fa-arrow-right"></span></p>
+        <p class="institution-role">{{project.miniDescription}}</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div ng-show="company.events != null">
+    <h3>Events</h3>
+
+    <div class="row institution" ng-repeat="event in company.events">
+
+      <div class="col-md-1">
+        <p class="year">{{event.year}}</p>
+      </div>
+      <div class="col-md-11">
+        <p class="institution-name">{{event.name}}</p>
+        <p>{{event.description}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div ng-show="company.images != null">
+    <h3>Images</h3>
+
+    <ul class="files">
+      <li ng-repeat="image in company.images"><img ng-src="{{image.url}}" class="img-responsive" alt="{{image.name}}">{{image.name}}</li>
+    </ul>
+
+  </div>
+
+</div>

@@ -8,13 +8,13 @@
  * Controller of the personalPageApp
  */
 angular.module('personalPageApp')
-  .controller('MainCtrl', ['$scope', '$anchorScroll', '$location',
-    function ($scope, $anchorScroll, $location) {
+  .controller('MainCtrl', ['$scope', '$anchorScroll', '$location', '$http',
+    function ($scope, $anchorScroll, $location, $http) {
 
       $.fn.fullpage.setAllowScrolling(true);
 
-    $scope.gotoAnchor = function(anchorName) {
-      $.fn.fullpage.moveTo(anchorName+'A');
+      $scope.gotoAnchor = function (anchorName) {
+        $.fn.fullpage.moveTo(anchorName);
         //if ($location.hash() !== anchorName) {
         //  $location.hash(anchorName);
         //} else {
@@ -22,9 +22,13 @@ angular.module('personalPageApp')
         //}
       };
 
-      $scope.gotoPath = function(type, id) {
-        $location.path('/' + type+"/"+id);
+      $scope.gotoPath = function (type, id) {
+        $location.path('/' + type + "/" + id);
       };
 
+      $http.get('data/data.json').success(function (data) {
+        $scope.data = data;
+        $.fn.fullpage.reBuild();
+      });
 
-  }]);
+    }]);

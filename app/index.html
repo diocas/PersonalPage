@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Diogo Castro - Software Engineer</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -15,45 +15,68 @@
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 </head>
 <body ng-app="personalPageApp">
 
 
 <div id="mainPage" ng-controller="MainCtrl">
   <header>
-    <ul id="topMenu">
-      <li data-menuanchor="aboutA"><a href="" ng-click="gotoAnchor('about')">About</a></li>
-      <li data-menuanchor="skillsA"><a href="" ng-click="gotoAnchor('skills')">Skills</a></li>
-      <li data-menuanchor="projectsA"><a href="" ng-click="gotoAnchor('projects')">Projects</a></li>
-      <li data-menuanchor="contactsA"><a href="" ng-click="gotoAnchor('contacts')">Contacts</a></li>
-    </ul>
+
+
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="btn-lg navbar-toggle collapsed" data-toggle="collapse"
+                  data-target="#menu-collapse" aria-expanded="false" style="color: #fff">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+          </button>
+          <a class="navbar-brand" hhref="" ng-click="gotoAnchor('intro')">Diogo<br>Castro</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="menu-collapse">
+
+          <ul id="topMenu" class="nav navbar-nav navbar-right">
+            <li data-menuanchor="about"><a href="" ng-click="gotoAnchor('about')">About</a></li>
+            <li data-menuanchor="skills"><a href="" ng-click="gotoAnchor('skills')">Skills</a></li>
+            <li data-menuanchor="projects"><a href="" ng-click="gotoAnchor('projects')">Projects</a></li>
+            <!--<li data-menuanchor="contacts"><a href="" ng-click="gotoAnchor('contacts')">Contacts</a></li>-->
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+
   </header>
 
   <div id="fullpage">
-    <div id="intro" data-anchor="introA" ng-include="'views/main_intro.html'" class="section"></div>
-    <div id="about" data-anchor="aboutA" ng-include="'views/main_about.html'" class="section"></div>
-    <div id="skills" data-anchor="skillsA" ng-include="'views/main_skills.html'" class="section"></div>
-    <div id="projects" data-anchor="projectsA" ng-include="'views/main_projects.html'" class="section"></div>
-    <div id="contacts" data-anchor="contactsA" ng-include="'views/main_contacts.html'" class="section"></div>
+    <section id="intro" data-anchor="intro" ng-include="'views/main_intro.html'" class="section"></section>
+    <section id="about" data-anchor="about" ng-include="'views/main_about.html'" class="section"></section>
+    <section id="skills" data-anchor="skills" ng-include="'views/main_skills.html'" class="section"></section>
+    <section id="projects" data-anchor="projects" ng-include="'views/main_projects.html'" class="section"></section>
+    <!--<section id="contacts" data-anchor="contacts" ng-include="'views/main_contacts.html'" class="section"></section>-->
+
+    <!--<footer id="footer" data-anchor="footerA" class="section fp-auto-height"> Este é o footer!!</footer>-->
   </div>
 
 
 </div>
 
-
 <div class="container">
   <div ng-view=""></div>
 </div>
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID
- <script>
-   !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-   (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-   r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-   }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-   ga('create', 'UA-XXXXX-X');
-   ga('send', 'pageview');
-</script>-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74650915-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
@@ -80,6 +103,9 @@
 <script src="scripts/controllers/company.js"></script>
 <script src="scripts/controllers/project.js"></script>
 <script src="scripts/controllers/job.js"></script>
+<script src="scripts/controllers/university.js"></script>
+<script src="scripts/fullpageConfig.js"></script>
 <!-- endbuild -->
+<script type="application/javascript">$.fn.fullpage.reBuild();</script>
 </body>
 </html>

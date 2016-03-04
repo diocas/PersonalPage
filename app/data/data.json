@@ -1,0 +1,420 @@
+{
+  "experience" : [
+    {
+      "prettyName" : "altice-labs",
+      "companyName" : "Altice Labs / PT Inovação",
+      "role" : "Software Engineer",
+      "beginningYear" : "2014",
+      "beginningMonth" : "Sept",
+      "logoUrl" : "images/alticelabs.jpg",
+      "descriptionText" : "Formerly known as PT Inovação, Altice Labs rose from Portugal Telecom research and development company, to the R&D company of all Altice group. \nAs member of this company, I was part of the Exploratory Projects and Experimentation department, contributing to the development of European Projects.",
+      "projects" : ["ucn"],
+      "url" : "http://www.alticelabs.com/",
+      "events" : [
+        {
+          "name" : "ICT 2015",
+          "description" : "Presentation of the UCN project and the TV Recommendation System in the UCN booth.",
+          "year" : "2015"
+        },
+        {
+          "name" : "3ª Conferência \"Cidades Inteligentes - Cidades do Futuro\"",
+          "description" : "Presentation of the UCN project and Assisted Living Recommendations.",
+          "year" : "2015"
+        },
+        {
+          "name" : "IoT Hackathon 2015",
+          "description" : "Development of automatic devices orchestration using IBM Bluemix. This hackathon was organized within the IoT Week Lisbon 2015. Our team was classified in 3rd place.",
+          "year" : "2015"
+        }
+      ],
+      "highlight" : true,
+      "order" : 2
+    },
+    {
+      "prettyName" : "mog",
+      "companyName" : "MOG",
+      "role" : "Master Thesis Project",
+      "beginningYear" : "2014",
+      "beginningMonth" : "Mar",
+      "endYear" : "2014",
+      "endMonth" : "Jul",
+      "logoUrl" : "images/mog.jpg",
+      "descriptionText" : "",
+      "projects" : ["master-thesis"],
+      "url" : "http://www.mog-technologies.com/",
+      "highlight" : true,
+      "order" : 1
+    },
+    {
+      "prettyName" : "actiworks",
+      "companyName" : "Actiworks Application \nSolutions GmbH",
+      "role" : "Student Internship",
+      "beginningYear" : "2014",
+      "beginningMonth" : "Jan",
+      "endYear" : "2014",
+      "endMonth" : "Mar",
+      "logoUrl" : "images/actiworks.jpg",
+      "descriptionText" : "Actiworks is a German company dedicated to the development of mobile and web applications, as well as hardware integration.\nDeveloped web applications using PHP, HTML, CSS, JavaScript, jQuery, CakePHP and Typo3.",
+      "url" : "http://www.actiworks.de/",
+      "files" : [
+        {
+          "name" : "Recommendation Letter",
+          "url" : "files/actiworks_recommendation.pdf"
+        }
+      ],
+      "highlight" : true,
+      "order" : 1
+    }
+  ],
+  "education" : [
+    {
+      "prettyName" : "feup",
+      "institutionName" : "Faculdade de Engenharia da \nUniversidade do Porto",
+      "degree" : "Master in Informatics and Computing Engineering (MIEIC)",
+      "beginning" : "2009",
+      "end" : "2014",
+      "logoUrl" : "images/feup.jpg",
+      "descriptionText" : "",
+      "projects" : ["master-thesis", "mobinect", "ceevitae", "feuplicious"],
+      "awards" : [
+        {
+          "year" : "2015",
+          "name" : "Prémio Reconhecimento Académico e Cívico Estudante André Silva",
+          "institution" : "Universidade do Porto",
+          "description" : "The Academic and Civic Recognition André Silva Award is assigned by University of Porto. The award is given to a graduate of FEUP (the top 4 students from each Course are invited to apply) who managed to associate, during his academic career, excellent academic achievement and a worthy citizen participation record."
+        }
+      ],
+      "organizations" : [
+        {
+          "name" : "NuIEEE",
+          "logoUrl" : "images/nuieee.png",
+          "description" : "",
+          "url" : "http://nuieee.fe.up.pt/",
+          "responsibilities" : ["Treasurer", "Team Leader - NuIEEE Development Team"]
+
+        },
+        {
+          "name" : "JuniFEUP",
+          "logoUrl" : "images/junifeup.png",
+          "description" : "",
+          "url" : "http://www.junifeup.pt/",
+          "responsibilities" : ["Web Developer"]
+
+        }
+      ],
+      "url" : "http://www.fe.up.pt",
+      "links" : [
+        {
+          "name" : "English Master's Degree (Integrated Master) Certificate",
+          "url" : "https://diplomas.up.pt/verifier/servlet/DocumentVerifierApp/template/VerifyDAT.vm?datid=m4Y3mWAw6YVTco5RMqIAw1Zd"
+        },
+        {
+          "name" : "European Supplement Diploma for Integrated Master's Classes",
+          "url" : "https://diplomas.up.pt/verifier/servlet/DocumentVerifierApp/template/VerifyDAT.vm?datid=jBM003hmFz1qcjv8rMfDg13Y"
+        }
+      ],
+      "subjects" : ["Software Engineering", "Programming", "Algorithms and Data Structures", "Artificial Inteligence",
+        "Computer Networks", "Operating Systems", "Distributed Systems", "Parallel Computing", "Databases",
+        "Web Languages and Technologies", "OOP Laboratory", "Mobile Applications"],
+      "highlight" : true,
+      "order" : 2
+    },
+    {
+      "prettyName" : "tum",
+      "institutionName" : "Technische Universität München",
+      "degree" : "Informatik",
+      "beginning" : "2013",
+      "end" : "2014",
+      "logoUrl" : "images/tum.png",
+      "descriptionText" : "Erasmus semester in Munich, Germany.",
+      "url" : "http://www.tum.de",
+      "subjects" : ["Network Security", "Data Mining"],
+      "highlight" : true,
+      "order" : 1
+    }
+  ],
+  "skills" : [
+    {
+      "name" : "Java",
+      "logoUrl" : "images/java.jpg",
+      "level" : 4
+    },
+    {
+      "name" : "HTML",
+      "logoUrl" : "images/html.png",
+      "level" : 4
+    },
+    {
+      "name" : "CSS",
+      "logoUrl" : "images/css.png",
+      "level" : 4
+    },
+    {
+      "name" : "jQuery",
+      "logoUrl" : "images/jquery.gif",
+      "level" : 4
+    },
+    {
+      "name" : "UML",
+      "logoUrl" : "images/uml.gif",
+      "level" : 4
+    },
+    {
+      "name" : "HbbTV",
+      "logoUrl" : "images/hbbtv.png",
+      "level" : 4
+    },
+    {
+      "name" : "JavaScript",
+      "logoUrl" : "images/javascript.jpg",
+      "level" : 3
+    },
+    {
+      "name" : "PHP",
+      "logoUrl" : "images/php.png",
+      "level" : 3
+    },
+    {
+      "name" : "J2EE",
+      "logoUrl" : "images/javaee.png",
+      "level" : 3
+    },
+    {
+      "name" : "c/C++",
+      "logoUrl" : "images/c++.png",
+      "level" : 3
+    },
+    {
+      "name" : "Cassandra",
+      "logoUrl" : "images/cassandra.png",
+      "level" : 3
+    },
+    {
+      "name" : "MySQL",
+      "logoUrl" : "images/mysql.jpg",
+      "level" : 3
+    },
+    {
+      "name" : "PostgreSQL",
+      "logoUrl" : "images/postgresql.png",
+      "level" : 3
+    },
+    {
+      "name" : "Git",
+      "logoUrl" : "images/git.png",
+      "level" : 3
+    },
+    {
+      "name" : "Angular",
+      "logoUrl" : "images/angular.png",
+      "level" : 2
+    },
+    {
+      "name" : "Bootstrap",
+      "logoUrl" : "images/bootstrap.png",
+      "level" : 2
+    },
+    {
+      "name" : "Maven",
+      "logoUrl" : "images/maven.png",
+      "level" : 2
+    },
+    {
+      "name" : "Sass",
+      "logoUrl" : "images/sass.png",
+      "level" : 2
+    },
+    {
+      "name" : "Jenkins CI",
+      "logoUrl" : "images/jenkins.png",
+      "level" : 1
+    },
+    {
+      "name" : "Docker",
+      "logoUrl" : "images/docker.png",
+      "level" : 1
+    },
+    {
+      "name" : "Python",
+      "logoUrl" : "images/python.png",
+      "level" : 1
+    }
+  ],
+  "projects" : [
+    {
+      "prettyName" : "personalpage",
+      "name" : "Personal Page",
+      "miniDescription" : "My personal page made with Bootstrap and Angular.",
+      "descriptionText" : "I wanted to learn Bootstrap and Angular so I used this pretext to do it. For a simple web page it may be a little too much, but it was a way to start using new technologies. \nThe page is not finished as there are some bugs and features missing, but it will be updated as the time goes. It is responsive but the small screen implementation is half baked. \nFor the colors and fonts, had the help of my friend Jessica.",
+      "beginning" : "2016",
+      "logoUrl" : "images/personalpage.png",
+      "technologies" : ["Bootstrap", "Angular.js"],
+      "coworkers" : [
+        {
+          "name" : "Jessica Costa"
+        }
+      ]
+    },
+    {
+      "prettyName" : "ucn",
+      "name" : "User-Centric Networking",
+      "url" : "https://usercentricnetworking.eu/",
+      "links" : [
+
+        {
+          "name" : "UCN project on Altice Labs",
+          "url" : "http://www.alticelabs.com/en/projects/ucn.html"
+        }
+      ],
+      "miniDescription" : "European FP7 Project dedicated to secure data collection, encryption, data mining and the development of practical and useful uses for that data.",
+      "descriptionText" : "The UCN project is an European FP7 Project and has the overall high-level objective to develop and use the PIH platform and architecture to install the user as the owner and controller of his/her personal data, allowing personalization and immersion while preserving a user’s privacy. \nMy contribution for the project and for PT Inovação was the development of a TV Recommendation System, based on viewers habits and information provided by multiple sources.",
+      "beginning" : "2014",
+      "logoUrl" : "images/ucn.jpg",
+      "technologies" : ["J2EE web services", "Wildfly", "Apache Cassandra", "PostgreSQL", "Docker", "Maven", "Jenkins CI"],
+      "coworkers" : [
+        {
+          "name" : "Telma Mota"
+        },
+        {
+          "name" : "Tiago Pires"
+        },
+        {
+          "name" : "Fábio Gonçalves"
+        }
+      ]
+    },
+    {
+      "prettyName" : "master-thesis",
+      "name" : "New Interactive Services for \nDigital Television (Master Thesis)",
+      "miniDescription" : "Design and development of a solution of interactivity in the context of linear television consumption in Smart TVs. Multi-platform advertising delivery (from producers to viewers) synchronized with linear transmission, with or without Internet access.",
+      "descriptionText" : "This dissertation is associated with the conclusion of the MSc in Informatics and Computing Engineering and it was proposed by the company MOG Solutions. The aim of this work was to develop new tools to allow producers of audiovisual content to insert additional interactive content in Smart TVs, using a layer of metadata and software. This data was embedded with the linear TV transmission, allowing the compatible equipments to show complementary information, synchronized with the content being transmitted.\nThe images bellow illustrate an application that was shown every time the corresponding car advert was transmitted, allowing the viewer to obtain detailed information about the car and the advert.",
+      "beginning" : "2013",
+      "end" : "2014",
+      "logoUrl" : "images/thesis.png",
+      "technologies" : ["HbbTV", "DVB-T", "MPEG-7", "MXF", "Handlebars.js", "HTML", "CSS", "JavaScript", "jQuery", "Python"],
+      "files" : [
+        {
+          "name" : "Abstract",
+          "url" : "files/dissertation_abstract.pdf"
+        },
+        {
+          "name" : "Resume",
+          "url" : "files/dissertation_resume.pdf"
+        }
+      ],
+      "images" : [
+        {
+          "url" : "images/thesis-1.png",
+          "name" : "Example of an interactive application (related to the advert being transmitted) running on a TV, sent through DVB feed"
+        },
+        {
+          "url" : "images/thesis-2.png",
+          "name" : "The application provided more information about the product being shown"
+        },
+        {
+          "url" : "images/thesis-3.png",
+          "name" : "The viewer could open the product website using a QR Code or directly on the TV browser"
+        },
+        {
+          "url" : "images/thesis-4.png",
+          "name" : "The viewer could see information about other elements namely the background music"
+        },
+        {
+          "url" : "images/thesis-5.png",
+          "name" : "A link to the music page on a music store"
+        },
+        {
+          "url" : "images/thesis-6.png",
+          "name" : "ole2"
+        }
+      ]
+    },
+    {
+      "prettyName" : "mobinect",
+      "name" : "MOBInect",
+      "miniDescription" : "Platform for Parkinson's disease rehabilitation on patient premises, using Microsoft Kinect sensor.",
+      "descriptionText" : "Developed under Project Management Laboratory (LGPR) course and proposed by INOVA+ company. MOBInect was a platform for Parkinson's disease rehabilitation on patient premises, using Microsoft Kinect sensor. Medical staff had the ability to record exercises and to send them to patients through the Internet. Patients performed the exercises while the system evaluated movements correctness to alert medical staff and to reward patients. \nMy contribution to the project consisted on the adaptation of the interface, of the application provided by INOVA+, to accommodate new features and design; the re-write of the interface between Unity and Kinect; and, with my colleague Luís, the creation of the movements evaluation system/algorithm, based on the Dynamic Time Warping algorithm.",
+      "beginning" : "2013",
+      "logoUrl" : "images/mobinect.png",
+      "technologies" : ["Kinect SDK", "C#", "Unity 3D"],
+      "coworkers" : [
+        {
+          "name" : "Luís Fonseca"
+        },
+        {
+          "name" : "Carlos Carvalheira"
+        },
+        {
+          "name" : "José Bateira"
+        },
+        {
+          "name" : "Tadeu Marques"
+        },
+        {
+          "name" : "Arkadiusz Gorgolewski"
+        }
+      ],
+      "images" : [
+        {
+          "url" : "images/mobinect-2.png",
+          "name" : ""
+        },{
+          "url" : "images/mobinect-5.png",
+          "name" : ""
+        },{
+          "url" : "images/mobinect-6.png",
+          "name" : ""
+        },{
+          "url" : "images/mobinect-7.png",
+          "name" : ""
+        },{
+          "url" : "images/mobinect-8.png",
+          "name" : ""
+        },{
+          "url" : "images/mobinect-9.png",
+          "name" : ""
+        }
+      ]
+    },
+    {
+      "prettyName" : "ceevitae",
+      "name" : "CeeVitae",
+      "miniDescription" : "Application to manage a CV.",
+      "descriptionText" : "Developed on Database and Web Laboratory, the application allowed the user to manage a CV and to export it.",
+      "beginning" : "2012",
+      "logoUrl" : "images/ceevitae.png",
+      "technologies" : ["PHP", "HTML5", "CSS3", "JQuery", "PostgreSQL"],
+      "coworkers" : [
+        {
+          "name" : "João Ponte"
+        }
+      ],
+      "images" : [
+        {
+          "url" : "images/ceevitae-1.png",
+          "name" : ""
+        }
+      ]
+    },
+    {
+      "prettyName" : "feuplicious",
+      "name" : "FEUPlicious",
+      "miniDescription" : "Social network for managing bookmarks.",
+      "descriptionText" : "Developed on Web Technologies Laboratory, this social network application was based on Delicious and allowed the user to manage bookmarks and share them with friend. The front-end application was completely developed in Javascript, connected via AJAX to a PHP backend service.",
+      "beginning" : "2012",
+      "logoUrl" : "images/feuplicious.png",
+      "technologies" : ["PHP", "HTML5", "CSS3", "JQuery", "XML", "JSON", "SQLite"],
+      "coworkers" : [
+        {
+          "name" : "João Ponte"
+        }
+      ],
+      "images" : [
+        {
+          "url" : "images/feuplicious-1.png",
+          "name" : ""
+        }
+      ]
+    }
+  ]
+}

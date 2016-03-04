@@ -12,26 +12,47 @@ angular.module('personalPageApp')
     function ($scope, $routeParams, $aside, $location) {
 
 
+
+
       $aside.open({
         templateUrl: 'views/project.html',
         placement: 'right',
         size: 'lg',
         backdrop: 'static',
-        controller: function ($scope, $uibModalInstance) {
+        keyboard: false,
+        controller: ['$scope', '$uibModalInstance', '$location', '$http', '$window',
+          function ($scope, $uibModalInstance, $location, $http, $window) {
 
           $.fn.fullpage.setAllowScrolling(false);
-          $scope.ok = function (e) {
-            $uibModalInstance.close();
-            e.stopPropagation();
-            $location.path('/');
+          $scope.projectId = $routeParams.projectId;
+
+          $scope.gotoPath = function(type, id) {
+            $location.path('/' + type+"/"+id);
           };
 
-          $scope.projectId = $routeParams.projectId;
+          $scope.ok = function (e) {
+            /*$uibModalInstance.close();
+            e.stopPropagation();
+            $location.path('/');*/
+            $window.history.back();
+          };
 
           $scope.$on('$locationChangeStart', function (e) {
             $uibModalInstance.close();
           });
-        }
+
+          $http.get('data/data.json').success(function (data) {
+
+            for (var id in data.projects) {
+
+              if (data.projects[id].prettyName == $routeParams.projectId) {
+                $scope.project = data.projects[id];
+                break;
+              }
+            }
+          });
+
+        }]
       }).result.then(postClose, postClose);
 
       function postClose() {
